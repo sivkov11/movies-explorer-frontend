@@ -1,0 +1,42 @@
+.portfolio {
+    padding: 0 0 125px;
+}
+
+.portfolio__container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.portfolio__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A0A0A0;
+    margin: 0 0 50px;
+}
+
+.portfolio__projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio__project {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    height: 70px;
+    border-bottom: solid #E8E8E8;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.portfolio__icon {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+}

@@ -1,0 +1,10 @@
+.header__section {
+    margin: 18px auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__auth {
+    background-color: #073042;
+}
