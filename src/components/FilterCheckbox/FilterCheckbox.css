@@ -1,0 +1,26 @@
+.checkbox__container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.checkbox__button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.checkbox__title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.checkbox__button {
+    background-image: url(../../images/green-checkbox.svg);
+    width: 36px;
+    height: 24px;
+}

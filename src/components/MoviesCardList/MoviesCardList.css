@@ -1,0 +1,11 @@
+.movie-list {
+    padding: 70px 15px 10px;
+}
+
+.movie-list__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}

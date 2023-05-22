@@ -1,5 +1,5 @@
 .about {
-    padding: 110px 0;
+    padding: 110px 15px;
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -41,17 +41,17 @@
     display: flex;
 }
 
-.about__week {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
+.about__week1 {
+    flex-grow: 1;
+}
+
+.about__week4 {
+    flex-grow: 5.16;
 }
 
 .about__green-block {
     font-weight: 400;
     font-size: 14px;
-    width: 228px;
     height: 36px;
     background: #2BE080;
     display: flex;
@@ -62,18 +62,19 @@
 .about__grey-block {
     font-weight: 400;
     font-size: 14px;
-    width: 912px;
     height: 36px;
     background: #F2F2F2;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-grow: 4;
 }
 
 .about__scale-text {
-    margin: 0;
+    margin: 14px 0 0;
     color: #A0A0A0;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    text-align: center;
 }

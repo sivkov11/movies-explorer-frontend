@@ -1,6 +1,6 @@
 .promo {
     background: #073042;
-    padding: 75px 0;
+    padding: 75px 15px;
 }
 
 .promo__banner {
@@ -28,7 +28,8 @@
 }
 
 .promo__button {
-    margin-top: 146px;
+    display: flex;
+    margin: 146px 0 auto;
     width: 129px;
     height: 36px;
     font-style: normal;
@@ -39,6 +40,8 @@
     background: none;
     color: #FFFFFF;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
 .promo__image {

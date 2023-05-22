@@ -1,0 +1,31 @@
+.search {
+    padding: 80px 15px 47px;
+}
+
+.search__container {
+    max-width: 1140px;
+    display: flex;
+    margin: 0 auto 32px;
+    position: relative;
+}
+
+.search__input {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    border: 0;
+    border-bottom: 1px solid #E8E8E8;
+    outline: none;
+    padding: 0 0 12px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.search__button {
+    background-image: url(../../images/button-find.svg);
+    width: 80px;
+    height: 34px;
+    position: absolute;
+    right: 0;
+}

@@ -1,13 +1,14 @@
 import './Header.css'
 import Logo from "../Logo/Logo";
 import AuthNavigation from "../AuthNavigation/AuthNavigation";
+import Navigation from "../Navigation/Navigation";
 
-function Header() {
+function Header({ loggedIn }) {
   return (
-    <header className="header header__auth">
+    <header className={`header ${ loggedIn ? `header__nav` : `header__auth`}`}>
       <section className="header__section">
         <Logo/>
-        <AuthNavigation/>
+        { loggedIn ? <Navigation/> : <AuthNavigation/> }
       </section>
     </header>
   );

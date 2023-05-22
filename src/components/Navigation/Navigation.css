@@ -1,0 +1,43 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+.navigation__links {
+    display: flex;
+    gap: 16px;
+}
+
+.navigation__link {
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation__link_movies {
+    font-weight: 500;
+
+}
+
+.navigation__link_likes {
+    font-weight: 400;
+}
+
+.navigation__profile {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: black;
+    background: #F9F9F9;
+    border-radius: 20px;
+    width: 100px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
