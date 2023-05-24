@@ -6,7 +6,7 @@ function Promo() {
     <section className="promo">
       <div className="promo__banner">
         <div className="promo__container">
-          <h1 className="promo__header">Учебный проект студента факультета <br/> Веб-разработки.</h1>
+          <h1 className="promo__header">Учебный проект студента факультета Веб-разработки.</h1>
           <p className="promo__text">Листайте ниже, чтобы узнать больше про этот проект и его создателя.</p>
           <a href="#about-project" className="promo__button">Узнать больше</a>
         </div>

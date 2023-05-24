@@ -1,13 +1,23 @@
 .navigation {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 0 auto;
-    flex-grow: 1;
+    justify-content: end;
+    width: 100%;
+    z-index: 1;
+}
+
+.navigation__cover {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    display: none;
 }
 
 .navigation__links {
     display: flex;
+    align-items: center;
     gap: 16px;
 }
 
@@ -18,13 +28,12 @@
     color: black;
 }
 
-.navigation__link_movies {
-    font-weight: 500;
-
+.navigation__link_main {
+    display: none;
 }
 
-.navigation__link_likes {
-    font-weight: 400;
+.navigation__link_movies {
+    font-weight: 500;
 }
 
 .navigation__profile {
@@ -40,4 +49,112 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.navigation__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#checkboxId {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger-line {
+    background-color: black;
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+}
+
+.hamburger-line:before,
+.hamburger-line:after {
+    content: "";
+    background-color: black;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburger-line:before {
+    top: 7px;
+}
+
+.hamburger-line:after {
+    top: -7px;
+}
+
+
+@media (max-width: 1023px) {
+    .navigation__link_main {
+        display: block;
+    }
+
+    .navigation {
+
+    }
+
+    .hamburger {
+        display: block;
+        padding: 15px 5px;
+    }
+
+    .navigation__links {
+        flex-direction: column;
+        margin: 160px 0 auto;
+        font-weight: 500;
+    }
+
+    .navigation__link_movies {
+        border-bottom: black solid 2px;
+        padding-bottom: 2px;
+    }
+
+    .navigation__profile {
+        margin-bottom: 90px;
+    }
+
+    .navigation__menu {
+        display: none;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        background-color: white;
+        height: 100%;
+        width: 70%;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #checkboxId:checked ~ .navigation__menu {
+        display: flex;
+        max-height: 100%;
+    }
+
+    #checkboxId:checked ~ .navigation__cover {
+        display: block;
+    }
+}
+
+@media (max-width: 423px) {
+    .navigation__menu {
+        width: 100%;
+    }
+
+    .navigation__profile {
+        margin-bottom: 46px;
+    }
 }

@@ -1,5 +1,5 @@
 .about {
-    padding: 110px 15px;
+    padding: 110px 70px;
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -7,7 +7,6 @@
 .about__title {
     font-weight: 400;
     font-size: 22px;
-    line-height: 27px;
     margin: 0 0 70px;
     border-bottom: black solid;
     padding-bottom: 23px;
@@ -19,21 +18,19 @@
 }
 
 .about__element {
-    width: 550px;
+    max-width: 550px;
 }
 
 .about__element-title {
     margin: 0;
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
 }
 
 .about__element-text {
     margin: 26px 0 0;
     font-weight: 400;
     font-size: 14px;
-    line-height: 20px;
 }
 
 .about__scale {
@@ -75,6 +72,69 @@
     color: #A0A0A0;
     font-weight: 500;
     font-size: 14px;
-    line-height: 17px;
     text-align: center;
+}
+
+@media (max-width: 1023px) {
+    .about {
+        padding: 90px 50px;
+    }
+
+    .about__elements {
+        gap: 30px;
+    }
+
+    .about__element-text {
+        margin: 22px 0 0;
+    }
+
+    .about__scale {
+        margin: 93px 0 0;
+    }
+
+    .about__element-text {
+        margin: 22px 0 0;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 424px) {
+    .about {
+        padding: 70px 18px;
+    }
+
+    .about__title {
+        font-size: 18px;
+        margin: 0 0 60px;
+        padding-bottom: 28px;
+    }
+
+    .about__elements {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about__element {
+
+    }
+
+    .about__element-title {
+        font-size: 18px;
+    }
+
+    .about__element-text {
+        margin: 16px 0 0;
+        font-size: 11px;
+    }
+
+    .about__grey-block {
+        font-size: 11px;
+        height: 35px;
+
+    }
+
+    .about__scale-text {
+        font-size: 11px;
+        height: 35px;
+    }
 }

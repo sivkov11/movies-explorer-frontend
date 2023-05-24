@@ -1,7 +1,12 @@
+.register {
+    padding: 70px 70px 0;
+}
+
 .register__container {
     display: flex;
     flex-direction: column;
-    margin: 70px 442px 0;
+    margin: 0 auto;
+    max-width: 396px;
 }
 
 .register__title {
@@ -12,7 +17,7 @@
 }
 
 .register__form {
-display: flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -35,7 +40,7 @@ display: flex;
     font-size: 14px;
     line-height: 17px;
     padding: 0 0 10px;
-    margin: 5px 0 0px;
+    margin: 5px 0 0;
 }
 
 .register__label {
@@ -59,17 +64,18 @@ display: flex;
     margin: 152px 0 0;
     background: #3456F3;
     border-radius: 3px;
-    width: 396px;
+    max-width: 396px;
     height: 45px;
     color: #FFFFFF;
     border: 0;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .register__login-text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 17px;
     text-align: center;
     color: #A0A0A0;
     margin: 16px 0 0;
@@ -78,4 +84,18 @@ display: flex;
 .register__login-link {
     color: #3456F3;
     text-decoration: none;
+}
+
+@media (max-width: 423px) {
+    .register {
+        padding: 56px 30px 0;
+    }
+
+    .register__button {
+        font-size: 12px;
+    }
+
+    .register__login-text {
+        font-size: 12px;
+    }
 }

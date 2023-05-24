@@ -1,5 +1,5 @@
 .portfolio {
-    padding: 0 15px 125px;
+    padding: 0 70px 125px;
 }
 
 .portfolio__container {
@@ -24,19 +24,56 @@
     margin: 0;
 }
 
+.portfolio__link {
+    display: flex;
+    justify-content: space-between;
+    flex: auto;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+
+.portfolio__link:hover {
+    color: #2BE080;
+}
+
 .portfolio__project {
     font-weight: 400;
     font-size: 30px;
-    line-height: 50px;
     height: 70px;
     border-bottom: solid #E8E8E8;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .portfolio__icon {
     font-weight: 400;
     font-size: 30px;
     line-height: 60px;
+}
+
+@media (max-width: 1023px) {
+    .portfolio {
+        padding: 0 50px 80px;
+    }
+
+    .portfolio__project {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 423px) {
+    .portfolio {
+        padding: 0 14px 70px;
+    }
+
+    .portfolio__project {
+        font-size: 18px;
+    }
+
+    .portfolio__title {
+        font-size: 14px;
+        margin: 0 0 40px;
+    }
 }

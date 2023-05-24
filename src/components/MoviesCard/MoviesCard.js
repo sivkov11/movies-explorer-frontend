@@ -8,8 +8,8 @@ function MoviesCard({isLiked}) {
   }
 
   return (
-    <ul className="movies-list">
-      <li className="movie">
+    <li className="movie">
+      <div className="movie__container">
         <img className="movie__image" src={Image} alt="Кадр из фильма"/>
         <div className="movie__info">
           <p className="movie__title">33 слова о дизайне</p>
@@ -19,8 +19,8 @@ function MoviesCard({isLiked}) {
           }
         </div>
         <p className="movie__duration">1ч 47м</p>
-      </li>
-    </ul>
+      </div>
+    </li>
   )
 }
 

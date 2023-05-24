@@ -15,7 +15,6 @@
 .checkbox__title {
     font-weight: 400;
     font-size: 13px;
-    line-height: 18px;
     margin: 0;
 }
 
@@ -23,4 +22,20 @@
     background-image: url(../../images/green-checkbox.svg);
     width: 36px;
     height: 24px;
+}
+
+@media (max-width: 1023px) {
+    .checkbox__container {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 423px) {
+    .checkbox__container {
+       justify-content: center;
+    }
+
+    .checkbox__title {
+        font-size: 11px;
+    }
 }
