@@ -7,19 +7,19 @@ function Portfolio() {
         <h2 className="portfolio__title">Портфолио</h2>
         <ul className="portfolio__projects">
           <li className="portfolio__project">
-            <a href="https://sivkov11.github.io/russian-travel-sivkov11/" className="portfolio__link">
+            <a href="https://sivkov11.github.io/russian-travel-sivkov11/" target="_blank" className="portfolio__link">
               Статичный сайт
               <span className="portfolio__icon">↗</span>
             </a>
           </li>
           <li className="portfolio__project">
-            <a className="portfolio__link">
+            <a href="https://sivkov11.github.io/russian-travel-sivkov11/" target="_blank" className="portfolio__link">
               Адаптивный сайт
               <span className="portfolio__icon">↗</span>
             </a>
           </li>
           <li className="portfolio__project">
-            <a className="portfolio__link">
+            <a href="https://mesto11.nomoredomains.monster/" target="_blank" className="portfolio__link">
               Одностраничное приложение
               <span className="portfolio__icon">↗</span>
             </a>

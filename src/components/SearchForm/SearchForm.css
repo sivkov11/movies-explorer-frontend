@@ -8,8 +8,6 @@
     align-items: center;
     margin: 0 auto 32px;
     position: relative;
-    border-bottom: 1px solid #E8E8E8;
-    padding: 0 0 13px;
 }
 
 .search__input {
@@ -21,6 +19,12 @@
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 0 0 13px;
+}
+
+.search__input:focus {
+    border-bottom: #3456F3 1px solid;
 }
 
 .search__button {
@@ -29,6 +33,10 @@
     height: 34px;
     position: absolute;
     right: 0;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    top: 0;
 }
 
 @media (max-width: 1023px) {

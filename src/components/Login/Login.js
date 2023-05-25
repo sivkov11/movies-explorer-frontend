@@ -11,11 +11,11 @@ function Login() {
         <form className="login__form">
           <div className="login__form-input">
             <label className="login__label" htmlFor="email">E-mail</label>
-            <input className="login__input" name="email" type="email"/>
+            <input className="login__input" name="email" type="email" required/>
           </div>
           <div className="login__form-input">
             <label className="login__label" htmlFor="password">Пароль</label>
-            <input className="login__input" name="password" type="password" minLength="2"/>
+            <input className="login__input" name="password" type="password" minLength="2" required/>
           </div>
           <button className="login__button" type="submit">Войти</button>
         </form>

@@ -5,7 +5,7 @@ import Navigation from "../Navigation/Navigation";
 
 function Header({ loggedIn }) {
   return (
-    <header className={`header ${ loggedIn ? `header__nav` : `header__auth`}`}>
+    <header className={`header ${ loggedIn ? `header__navigation` : `header__auth`}`}>
       <section className="header__section">
         <Logo/>
         { loggedIn ? <Navigation/> : <AuthNavigation/> }

@@ -74,6 +74,7 @@
     height: 2px;
     width: 24px;
     position: relative;
+    transition: 0s;
 }
 
 .hamburger-line:before,
@@ -88,10 +89,12 @@
 
 .hamburger-line:before {
     top: 7px;
+    transition: .5s;
 }
 
 .hamburger-line:after {
     top: -7px;
+    transition: .5s;
 }
 
 
@@ -107,6 +110,7 @@
     .hamburger {
         display: block;
         padding: 15px 5px;
+        position: fixed;
     }
 
     .navigation__links {
@@ -142,10 +146,26 @@
     #checkboxId:checked ~ .navigation__menu {
         display: flex;
         max-height: 100%;
+        position: fixed;
     }
 
     #checkboxId:checked ~ .navigation__cover {
         display: block;
+        position: fixed;
+    }
+
+    #checkboxId:checked ~ .hamburger .hamburger-line {
+        background-color: transparent;
+    }
+
+    #checkboxId:checked ~ .hamburger .hamburger-line:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #checkboxId:checked ~ .hamburger .hamburger-line:after {
+        transform: rotate(45deg);
+        top: 0;
     }
 }
 
