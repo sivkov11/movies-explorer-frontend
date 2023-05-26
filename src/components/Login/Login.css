@@ -7,7 +7,6 @@
     flex-direction: column;
     margin: 0 auto;
     max-width: 396px;
-    align-items: center;
 }
 
 .login__title {
@@ -95,6 +94,10 @@
 @media (max-width: 423px) {
     .login {
         padding: 56px 30px 0;
+    }
+
+    .login__container {
+        align-items: center;
     }
 
     .login__button {

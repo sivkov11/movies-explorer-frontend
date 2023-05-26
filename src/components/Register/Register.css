@@ -7,7 +7,6 @@
     flex-direction: column;
     margin: 0 auto;
     max-width: 396px;
-    align-items: center;
 }
 
 .register__title {
@@ -95,6 +94,10 @@
 @media (max-width: 423px) {
     .register {
         padding: 56px 30px 0;
+    }
+
+    .register__container {
+        align-items: center;
     }
 
     .register__button {
