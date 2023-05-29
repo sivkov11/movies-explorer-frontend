@@ -1,0 +1,5 @@
+.logo {
+    background: url(../../images/header__logo.svg) no-repeat;
+    min-width: 38px;
+    min-height: 38px;
+}
