@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 import Main from "../Main/Main";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -9,9 +9,30 @@ import Profile from "../Profile/Profile";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
+import * as Auth from "../../utils/Auth";
 
 
 function App() {
+  const navigate = useNavigate()
+
+  const handleRegister = (data) => {
+    Auth.register(data).then(() => {
+      navigate('/movies')
+    })
+  }
+
+  const handleLogin = (data) => {
+    Auth.login(data).then(() => {
+      navigate('/movies')
+    })
+  }
+
+
+
+
+
+
+
   return (
     <div className="page">
       <Routes>
@@ -53,12 +74,12 @@ function App() {
         <Route
           path="/signup"
           element={
-            <Register/>
+            <Register handleRegister={handleRegister}/>
           }/>
         <Route
           path="/signin"
           element={
-            <Login/>
+            <Login handleLogin={handleLogin}/>
           }/>
         <Route
           path="/*"

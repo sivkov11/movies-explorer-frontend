@@ -1,3 +1,8 @@
+.checkbox {
+    width: 100%;
+    margin-top: 32px;
+}
+
 .checkbox__container {
     display: flex;
     align-items: center;
@@ -55,16 +60,25 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+    margin: 0;
 }
 
 
 @media (max-width: 1023px) {
+    .checkbox {
+        margin-top: 29px;
+    }
+
     .checkbox__container {
         flex-direction: row-reverse;
     }
 }
 
 @media (max-width: 423px) {
+    .checkbox {
+        margin-top: 40px;
+    }
+
     .checkbox__title {
         font-size: 11px;
     }

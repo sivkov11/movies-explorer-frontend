@@ -5,9 +5,11 @@
 .search__container {
     max-width: 1140px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto 32px;
+    margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .search__input {
@@ -21,6 +23,7 @@
     flex-wrap: wrap;
     border-bottom: 1px solid #E8E8E8;
     padding: 0 0 13px;
+    width: 100%;
 }
 
 .search__input:focus {
