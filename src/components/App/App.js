@@ -10,10 +10,25 @@ import Register from "../Register/Register";
 import Login from "../Login/Login";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import * as Auth from "../../utils/Auth";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute"
+import React, {useState, useEffect} from "react";
 
 
 function App() {
   const navigate = useNavigate()
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  const tokenCheck = () => {
+    const jwt = localStorage.getItem('jwt')
+    if (jwt) {
+      setLoggedIn(true)
+      navigate('/movies')
+    }
+  }
+
+  useEffect(() => {
+    tokenCheck();
+  }, [])
 
   const handleRegister = (data) => {
     Auth.register(data).then(() => {
@@ -22,15 +37,20 @@ function App() {
   }
 
   const handleLogin = (data) => {
-    Auth.login(data).then(() => {
-      navigate('/movies')
+    Auth.login(data).then((res) => {
+      localStorage.setItem('jwt', res.token)
+      if (res.token) {
+        setLoggedIn(true)
+        navigate('/movies')
+      }
     })
   }
 
-
-
-
-
+  const handleLogout = () => {
+    setLoggedIn(false)
+    localStorage.removeItem("jwt")
+    navigate('/')
+  }
 
 
   return (
@@ -40,7 +60,7 @@ function App() {
           path="/"
           element={
             <>
-              <Header loggedIn={false}/>
+              <Header loggedIn={loggedIn}/>
               <Main/>
               <Footer/>
             </>
@@ -49,8 +69,11 @@ function App() {
           path="/movies"
           element={
             <>
-              <Header loggedIn={true}/>
-              <Movies/>
+              <Header loggedIn={loggedIn}/>
+              <ProtectedRoute
+                loggedIn={loggedIn}
+                component={Movies}
+              />
               <Footer/>
             </>
           }/>
@@ -58,8 +81,11 @@ function App() {
           path="/saved-movies"
           element={
             <>
-              <Header loggedIn={true}/>
-              <SavedMovies/>
+              <Header loggedIn={loggedIn}/>
+              <ProtectedRoute
+                loggedIn={loggedIn}
+                component={SavedMovies}
+              />
               <Footer/>
             </>
           }/>
@@ -68,7 +94,11 @@ function App() {
           element={
             <>
               <Header loggedIn={true}/>
-              <Profile/>
+              <ProtectedRoute
+                loggedIn={loggedIn}
+                component={Profile}
+                handleLogout={handleLogout}
+              />
             </>
           }/>
         <Route
