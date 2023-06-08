@@ -1,6 +1,7 @@
 .checkbox {
-    width: 100%;
-    margin-top: 32px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 70px;
 }
 
 .checkbox__container {
@@ -8,7 +9,7 @@
     align-items: center;
     gap: 14px;
     max-width: 1140px;
-    margin: 0 auto;
+
 }
 
 .checkbox__button {
@@ -66,7 +67,7 @@
 
 @media (max-width: 1023px) {
     .checkbox {
-        margin-top: 29px;
+        padding: 0 30px;
     }
 
     .checkbox__container {
@@ -75,9 +76,6 @@
 }
 
 @media (max-width: 423px) {
-    .checkbox {
-        margin-top: 40px;
-    }
 
     .checkbox__title {
         font-size: 11px;

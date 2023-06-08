@@ -56,6 +56,7 @@
 }
 
 .register__error {
+    display: none;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
@@ -63,6 +64,10 @@
     position: absolute;
     margin: 0;
     top: 51px;
+}
+
+.register__error_active {
+    display: block;
 }
 
 .register__button {
@@ -76,6 +81,10 @@
     cursor: pointer;
     font-weight: 500;
     font-size: 14px;
+}
+
+.register__button_disable {
+    background: #a4a4a4;
 }
 
 .register__login-text {

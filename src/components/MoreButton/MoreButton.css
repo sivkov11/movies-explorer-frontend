@@ -1,5 +1,5 @@
 .more {
-    padding: 50px 70px 80px;
+    padding: 50px 0 80px;
 }
 
 .more__container {
@@ -20,16 +20,4 @@
     border: none;
     cursor: pointer;
     padding: 0;
-}
-
-@media (max-width: 1023px) {
-    .more {
-        padding: 50px 30px 80px;
-    }
-}
-
-@media (max-width: 423px) {
-    .more {
-        padding: 50px 10px 80px;
-    }
 }

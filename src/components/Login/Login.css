@@ -77,6 +77,10 @@
     font-size: 14px;
 }
 
+.register__button_disable {
+    background: #a4a4a4;
+}
+
 .login__login-text {
     font-weight: 400;
     font-size: 14px;
