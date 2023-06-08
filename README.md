@@ -4,4 +4,4 @@
 
 ссылка на пул-реквест: https://github.com/sivkov11/movies-explorer-frontend/pull/2
 
-ссылка на фронтенд: https://sivkov.movie.nomoredomains.rocks
+ссылка на фронтенд: https://sivkov.movie.nomoredomains.rocks/movies
