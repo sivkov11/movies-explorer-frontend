@@ -41,8 +41,12 @@ function App() {
   }, [])
 
   const handleRegister = (data) => {
-    auth.register(data).then(() => {
-      navigate('/movies')
+    auth.register(data).then((res) => {
+      localStorage.setItem('jwt', res.token)
+      if (res.token) {
+        setLoggedIn(true)
+        navigate('/movies')
+      }
     }).catch((err) => console.log(err));
   }
 
