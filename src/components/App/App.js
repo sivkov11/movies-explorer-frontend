@@ -58,7 +58,12 @@ function App() {
 
   const handleLogout = () => {
     setLoggedIn(false)
-    localStorage.removeItem("jwt")
+    localStorage.clear()
+    setCurrentUser({
+      name: '',
+      email: '',
+      password: ''
+    });
     navigate('/')
   }
 
