@@ -121,7 +121,7 @@ function App() {
       })
       .finally(() => setPreloader(false))
       .catch((err) => console.log(err));
-  }, [isChecked, loggedIn, navigate]);
+  }, [isChecked, loggedIn]);
 
   const handleAddMovie = (movie) => {
     const addMovie = {
