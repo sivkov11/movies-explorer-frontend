@@ -16,6 +16,8 @@ import mainApi from "../../utils/MainApi";
 import {useCallback} from "react";
 import auth from "../../utils/Auth";
 import api from "../../utils/Api";
+import InfoTooltip from '../InfoTooltip/InfoTooltip';
+import { message } from '../../utils/Constants';
 
 function App() {
   const navigate = useNavigate()
@@ -24,6 +26,9 @@ function App() {
   const [isChecked, setIsChecked] = useState(false);
   const [currentUser, setCurrentUser] = useState('');
   const [preloader, setPreloader] = useState(true);
+  const [infoTooltip, setInfoTooltip] = useState(false);
+  const [isTooltipPopupOpen, setIsTooltipPopupOpen] = useState(false);
+  const [messageTooltip, setMessageTooltip] = useState('');
 
   const getWindowWidth = useCallback(() => window.innerWidth, []);
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
@@ -116,7 +121,7 @@ function App() {
       })
       .finally(() => setPreloader(false))
       .catch((err) => console.log(err));
-  }, [isChecked, loggedIn]);
+  }, [isChecked, loggedIn, navigate]);
 
   const handleAddMovie = (movie) => {
     const addMovie = {
@@ -154,11 +159,40 @@ function App() {
       .editUser(data)
       .then((res) => {
         setCurrentUser(res);
+        console.log(res)
+        setInfoTooltip(true);
+        setMessageTooltip('Вы изменили личные данные');
       })
       .catch((err) => {
         console.log(err);
+        setInfoTooltip(false);
+        setMessageTooltip(message.catchError);
       })
+      .finally(() => {
+        setIsTooltipPopupOpen(true);
+      });
   };
+
+  const closeAllPopups = () => {
+    setIsTooltipPopupOpen(false);
+  };
+
+  const isOpenPopup = isTooltipPopupOpen;
+
+  useEffect(() => {
+    function closeByEscape(evt) {
+      if (evt.key === 'Escape') {
+        closeAllPopups();
+      }
+    }
+
+    if (isOpenPopup) {
+      document.addEventListener('keydown', closeByEscape);
+      return () => {
+        document.removeEventListener('keydown', closeByEscape);
+      };
+    }
+  }, [isOpenPopup]);
 
 
   return (
@@ -236,6 +270,12 @@ function App() {
               <NotFoundPage/>
             }/>
         </Routes>
+        <InfoTooltip
+          isOpen={isTooltipPopupOpen}
+          onClose={closeAllPopups}
+          onInfoTooltip={infoTooltip}
+          messageTooltip={messageTooltip}
+        />
       </CurrentUserContext.Provider>
     </div>
   )

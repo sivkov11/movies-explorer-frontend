@@ -22,12 +22,12 @@ function Profile({onLogout, onUpdateUser}) {
     if (currentUser) {
       resetForm(currentUser);
     }
-  }, [resetForm]);
+  }, [resetForm, currentUser]);
 
   return (
     <section className="profile">
       <div className="profile__container">
-        <h2 className="profile__title">Привет, {values.name}!</h2>
+        <h2 className="profile__title">Привет, {currentUser.name}!</h2>
         <form onSubmit={handleSubmit} className="profile__info" noValidate>
           <div className="profile__info-block profile__info-block_name">
             <span className="profile__name">Имя</span>
