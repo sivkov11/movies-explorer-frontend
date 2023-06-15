@@ -1,17 +1,17 @@
 import './FilterCheckbox.css'
 
-function FilterCheckbox() {
+function FilterCheckbox({ handleShortFilter, filterCheckbox }) {
 
   return (
-    <div className="checkbox">
+    <section className="checkbox">
       <div className="checkbox__container">
         <label className="checkbox__button" htmlFor="checkbox">
-          <input type="checkbox" id="checkbox" className="checkbox__input"></input>
+          <input type="checkbox" id="checkbox" className="checkbox__input" checked={!!filterCheckbox} onChange={handleShortFilter}></input>
           <span className="checkbox__slider"></span>
         </label>
         <p className="checkbox__title">Короткометражки</p>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,5 +1,5 @@
 .movie-list {
-    padding: 70px 70px 10px;
+    padding: 70px 70px 0;
 }
 
 .movie-list__container {
@@ -11,16 +11,27 @@
     padding: 0;
 }
 
+.movie__image {
+    object-fit: cover;
+    width: 364px;
+    height: 203px;
+}
+
 @media (max-width: 1279px) {
     .movie-list__container {
         grid-template-columns: repeat(2, auto);
         justify-content: center;
     }
+
+    .movie__image {
+        width: 339px;
+        height: 190px;
+    }
 }
 
 @media (max-width: 1023px) {
     .movie-list {
-        padding: 70px 30px 30px;
+        padding: 70px 30px 0;
     }
 
     .movie-list__container {
@@ -40,6 +51,11 @@
     }
 
     .movie-list {
-        padding: 40px 10px 26px;
+        padding: 40px 10px 0;
+    }
+
+    .movie__image {
+        width: 300px;
+        height: 168px;
     }
 }

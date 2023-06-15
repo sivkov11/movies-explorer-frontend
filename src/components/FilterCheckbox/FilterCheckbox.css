@@ -1,9 +1,15 @@
+.checkbox {
+    width: auto;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
 .checkbox__container {
     display: flex;
     align-items: center;
     gap: 14px;
     max-width: 1140px;
-    margin: 0 auto;
+
 }
 
 .checkbox__button {
@@ -55,16 +61,22 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+    margin: 0;
 }
 
 
 @media (max-width: 1023px) {
+    .checkbox {
+        padding: 0 30px;
+    }
+
     .checkbox__container {
         flex-direction: row-reverse;
     }
 }
 
 @media (max-width: 423px) {
+
     .checkbox__title {
         font-size: 11px;
     }
